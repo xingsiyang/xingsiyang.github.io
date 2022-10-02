@@ -1,0 +1,61 @@
+<head>
+    <meta charset=UTF-8>
+    <!-- 连接css -->
+    <link  href="index.css" rel="stylesheet">
+    <title>推盘小游戏</title>
+</head>
+<body>
+    <h1>推盘小游戏</h1>
+    <!-- 可以进行推动的九宫格 -->
+    <div class="container">
+        <h2>初始</h2>
+        <div class="start">
+            <div class="row">
+                <div class="cell" rowcount="0" columncount="0" onclick="move(this)">1</div>
+                <div class="cell" rowcount="0" columncount="1" onclick="move(this)">2</div>
+                <div class="cell" rowcount="0" columncount="2" onclick="move(this)">3</div>
+            </div>
+            <div class="row">
+                <div class="cell" rowcount="1" columncount="0" onclick="move(this)">4</div>
+                <div class="cell" rowcount="1" columncount="1" onclick="move(this)">5</div>
+                <div class="cell" rowcount="1" columncount="2" onclick="move(this)">6</div>
+            </div>
+            <div class="row">
+                <div class="cell" rowcount="2" columncount="0" onclick="move(this)">7</div>
+                <div class="cell" rowcount="2" columncount="1" onclick="move(this)">8</div>
+                <!-- 初始的空白方块 -->
+                <div class="cell" rowcount="2" columncount="2" onclick="move(this)" id="empty"></div>
+            </div>
+        </div>
+        <!-- 将初始九宫格打乱顺序得按钮和重置的按钮 -->
+        <div class="buttons">        
+            <button class="startButton" onclick="start()">打乱顺序</button>
+            <button class="restartButton" onclick="restart()">重置</button>
+        </div>
+    </div>
+    <!-- 目标九宫格 -->
+    <div class="container">
+        <h2>目标</h2>
+        <div class="goal">
+            <div class="row">
+                <div class="cell">1</div>
+                <div class="cell">2</div>
+                <div class="cell">3</div>
+            </div>
+            <div class="row">
+                <div class="cell">4</div>
+                <div class="cell">5</div>
+                <div class="cell">6</div>
+            </div>
+            <div class="row">
+                <div class="cell">7</div>
+                <div class="cell">8</div>
+                <div class="cell"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 连接JavaScript文件 -->
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</body>
